@@ -90,6 +90,7 @@ class FieldSet extends Component{
               />
         </Form.Field>
         <Button primary
+          loading = {this.state.isLoading}
           disabled={this.state.isDisabled}
             type='submit'>Submit</Button>
     </Form>

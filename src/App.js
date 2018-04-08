@@ -88,11 +88,13 @@ class App extends Component {
     return (
 
       <Layout>
+
+
         <Container style={{marginTop:'10px'}}>
           <Grid>
               <Grid.Row>
                 <Grid.Column  width={9}>
-                  <Card.Group items={this.state.items} />
+                  <Card.Group key={this.state.items.key} items={this.state.items} />
                 </Grid.Column>
                 <Grid.Column  width={6}>
                   <Container fluid >

@@ -1,12 +1,12 @@
 const WALLETPROVIDER = require('truffle-hdwallet-provider');
 const Web3 = require('web3');
-
 const compiledFactory = require('./build/CarTrade.json');
-
+const fs = require('fs-extra')
+const ADDRESS_FILE = "./ADDRESS";
 
 const provider = new WALLETPROVIDER(
-  '', //Add mnemonic here
-  '' //Add Infura link
+  'caution tilt convince say choose title cigar salt marriage few traffic hill', //Add mnemonic here
+  'https://rinkeby.infura.io/sJfJAoz6bfYABBiAwsJb'
 );
 
 // const provider = new WALLETPROVIDER(
@@ -35,6 +35,10 @@ accounts = await web3.eth.getAccounts();
 
   console.log('Contract Address '+inbox.options.address);
   inbox.setProvider(provider);
+
+
+  fs.outputJsonSync(ADDRESS_FILE, {ADDRESS: inbox.options.address})
+
 }
 
 
