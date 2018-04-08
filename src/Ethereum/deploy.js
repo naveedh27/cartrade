@@ -5,12 +5,12 @@ const compiledFactory = require('./build/CarTrade.json');
 
 
 const provider = new WALLETPROVIDER(
-  'caution tilt convince say choose title cigar salt marriage few traffic hill',
-  'https://rinkeby.infura.io/sJfJAoz6bfYABBiAwsJb'
+  '', //Add mnemonic here
+  '' //Add Infura link
 );
 
 // const provider = new WALLETPROVIDER(
-//   'caution tilt convince say choose title cigar salt marriage few traffic hill',
+//   '',
 //   'http://localhost:8545'
 // );
 const web3 = new Web3(provider);
